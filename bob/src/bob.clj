@@ -7,9 +7,8 @@
 (defn- shouting? [input] (and
                            (= input (clojure.string/upper-case input))
                            (has-letters? input)))
-gs
-(defn response-for
-      [input]
+
+(defn response-for [input]
   (cond
     (silence? input) "Fine. Be that way!"
     (shouting? input) "Whoa, chill out!"
